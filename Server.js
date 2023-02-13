@@ -1,9 +1,10 @@
 const express = require('express');
 const app = express();
-const portNumber = 3005;
+const portNumber = process.env.PORT||3005;
 const Sequelize=require('sequelize');
 const cors = require('cors');
 const bcrypt=require('bcrypt');
+require('dotenv').config();
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 const {Game, GroupJoin, Group, Post, SavedPost, User}=require('./models');
