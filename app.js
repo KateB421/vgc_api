@@ -10,7 +10,7 @@ app.use(express.urlencoded({extended:false}));
 const {Game, GroupJoin, Group, Post, SavedPost, User}=require('./models');
 app.use(
     cors({
-        origin: 'http://localhost:3000',
+        origin: '*',
         credentials:true
     })
 )
