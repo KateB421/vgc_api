@@ -1,3 +1,4 @@
+//Setting up express and other packages.
 const express = require('express');
 const app = express();
 const portNumber = process.env.PORT||3005;
@@ -18,6 +19,9 @@ app.use(
 app.listen(portNumber, function(req,res){
     console.log(`listening on port ${portNumber}`);
 })
+
+//Here I start to create the routes for every table in my database. I make sure that each table at a
+// minimum has a route to get all items, get item by id, add an item, delete an item, and edit an item.
 
 // Games Table
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
